@@ -1,16 +1,17 @@
-package ejerciciod;
-
 public class Main {
 
-    public static void main(String[] args) {
-        int n = 10;
-        int x = 2;
-        FuncionesR recursividad = new FuncionesR();
-        double result = recursividad.calcExponencial(n, x, 0, 0);
-        System.out.println("Resultado final: " + result);
-        
+    public static Boolean esBinario(int x){
+        Boolean esBinario = true;
+        while (x != 0) {
+            if (x % 10 > 1) {
+                return false;
+            }
+            x = x / 10;
+        }
+        return esBinario;
+    }
+    public static void main(String args[]) {
+
+        System.out.println(esBinario(53099));
     }
 }
-    
-
-    
